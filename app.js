@@ -39,6 +39,7 @@ app.get('/', async (req, res) => {
       </html>
     `;
 
+        res.setHeader('Cache-Control', 'no-cache');
         res.send(html);
     } catch (error) {
         console.error('Error fetching JSON:', error);
